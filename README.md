@@ -1,6 +1,8 @@
-# アカウント・環境構築不要のR環境
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/k-metrics/binder/master)
+# アカウント取得・環境構築不要のR環境
+Click here, [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/k-metrics/binder/master)
 
+
+---
 
 # Specifying an R environment with a runtime.txt file
 
