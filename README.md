@@ -1,4 +1,4 @@
-binder, Turn a Git repo into a collection of interactive notebooks
+binder, Turn a Git repository into a collection of interactive notebooks
 ================
 
 　本リポジトリは [binder example](https://github.com/binder-examples/r)
@@ -49,13 +49,13 @@ app](https://mybinder.org/v2/gh/k-metrics/binder/master?urlpath=shiny/bus-dashbo
 
 ### 制限事項
 
-　R/RStudio 環境のプロット（図）では日本語フォントが文字化けします。
+　プロット（図）では日本語フォントが文字化けします。
 
 　
 
 ## Shiny環境
 
-　[shiny](https://shiny.rstudio.com/)
+　[Shiny](https://shiny.rstudio.com/)
 サーバーを利用することも可能です。サブフォルダ単位でアプリケーションを構築すると複数のアプリを同一リポジトリで扱うことができます。
 
 　

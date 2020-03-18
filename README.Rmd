@@ -27,7 +27,7 @@ knitr::opts_chunk$set(echo = TRUE)
 [![binder](https://mybinder.org/badge_logo.svg) Try to lunch Shiny app](https://mybinder.org/v2/gh/k-metrics/binder/master?urlpath=shiny/bus-dashboard/)
 
 　  
-
+    
 ## R/RStduio環境
 　R/RStudio 環境を利用する場合には [MRAN](https://mran.microsoft.com/documents/rro/reproducibility) のスナップショットを利用して R とライブラリのバージョンを指定することができます。  
 　`runtime.txt` に以下のフォーマットで指定します。  
