@@ -1,46 +1,65 @@
-# アカウント取得・環境構築不要のR環境
-Click here, [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/k-metrics/binder/master)
+binder, Turn a Git repository into a collection of interactive notebooks
+================
 
+　本リポジトリは [binder example](https://github.com/binder-examples/r)
+からフォークしたものです。フォークしたファイルのライセンスはフォーク元のライセンスにしたがいます。本リポジトリで追加したファイルのライセンスは
+CC 4.0 BY-NC-SA となります。
 
----
+　
 
-# Specifying an R environment with a runtime.txt file
+# binder
 
-Jupyter+R: [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/binder-examples/r/master?filepath=index.ipynb)
+　[binder <i class="fa fa-external-link"></i>](https://mybinder.org/) は
+GitHub のリポジトリから Jupyter Notebook や RStudio Server
+などのコード実行環境を構築できるクラウドサービスです。  
+　binder を利用することで環境構築の手間が省けるだけでなく環境の再現性が確保できるのが大きなメリットです。ただし、構築される環境は
+**ワンタイム** な環境ですので永続的に利用することはできません。
 
-RStudio: [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/binder-examples/r/master?urlpath=rstudio)
+　
 
-RShiny: [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/binder-examples/r/master?urlpath=shiny/bus-dashboard/)
+## Try binder
 
-Binder supports using R and RStudio, with libraries pinned to a specific 
-snapshot on [MRAN](https://mran.microsoft.com/documents/rro/reproducibility).
+　まずは試してみましょう！
 
-You need to have a `runtime.txt` file that is formatted like:
+[![binder](https://mybinder.org/badge_logo.svg) Try to lunch
+Jupyter](https://mybinder.org/v2/gh/k-metrics/binder/master?filepath=index.ipynb)
 
-```
-r-<YYYY>-<MM>-<DD>
-```
+[![binder](https://mybinder.org/badge_logo.svg) Try to lunch RStudio
+Server](https://mybinder.org/v2/gh/k-metrics/binder/master?urlpath=rstudio)
 
-where YYYY-MM-DD is a snapshot at MRAN that will be used for installing 
-libraries. In this line, you can request a [specific 
-version of R](https://github.com/jupyter/repo2docker/pull/772#issue-313426641). To do this list the version between the 'r' 
-and the year, as in `r-3.6-2019-09-24`. Right now the default version of R is 3.6.
+[![binder](https://mybinder.org/badge_logo.svg) Try to lunch Shiny
+app](https://mybinder.org/v2/gh/k-metrics/binder/master?urlpath=shiny/bus-dashboard/)
 
-You also need a Python notebook file such as [this one](https://github.com/binder-examples/r/blob/master/index.ipynb).
+　
 
-You can also have an `install.R` file that will be executed during build, and can be used to install libraries.
+## R/RStduio環境
 
-Both [RStudio](https://www.rstudio.com/) and [IRKernel](https://irkernel.github.io/)
-are installed by default, so you can use either the Jupyter notebook interface or
-the RStudio interface.
+　R/RStudio 環境を利用する場合には
+[MRAN](https://mran.microsoft.com/documents/rro/reproducibility)
+のスナップショットを利用して R とライブラリのバージョンを指定することができます。  
+　`runtime.txt` に以下のフォーマットで指定します。
 
-This repository also contains an example of a Shiny app.
+    r-<v.v>-<YYYY>-<MM>-<DD>
 
-Last, note that if your Binder URL points to a folder, as in 
+　また、`install.R`
+ファイルに利用したいパッケージを記述しておくとビルド時にインストールしてくれます。本リポジトリではフォーク元のデフォルト設定を利用しています。  
+　本リポジトリでは `rocker/tidyverse` 相当のパッケージがインストールされています。
 
-http://mybinder.org/v2/gh/binder-examples/r/master?urlpath=shiny/bus-dashboard/,
+　
 
-you will need (1) to put in the final slash in the URL, and (2) to avoid converted 
-spaces-'%20'-in the URL, instead placing a hyphen.
+### 制限事項
 
-**Note:** An alternative is to use the excellent [holepunch package for R](https://karthik.github.io/holepunch/articles/getting_started.html).
+　プロット（図）では日本語フォントが文字化けします。
+
+　
+
+## Shiny環境
+
+　[Shiny](https://shiny.rstudio.com/)
+サーバーを利用することも可能です。サブフォルダ単位でアプリケーションを構築すると複数のアプリを同一リポジトリで扱うことができます。
+
+　
+
+-----
+
+Enjoy\!
