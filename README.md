@@ -47,12 +47,6 @@ app](https://mybinder.org/v2/gh/k-metrics/binder/master?urlpath=shiny/bus-dashbo
 
 　
 
-### 制限事項
-
-　プロット（図）では日本語フォントが文字化けします。
-
-　
-
 ## Shiny環境
 
 　[Shiny](https://shiny.rstudio.com/)
