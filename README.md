@@ -39,7 +39,7 @@ app](https://mybinder.org/v2/gh/k-metrics/binder/master?urlpath=shiny/bus-dashbo
 のスナップショットを利用して R とライブラリのバージョンを指定することができます。  
 　`runtime.txt` に以下のフォーマットで指定します。
 
-    r-<v.v>-<YYYY>-<MM>-<DD>
+    r-<R.R>-<YYYY>-<MM>-<DD>
 
 　また、`install.R`
 ファイルに利用したいパッケージを記述しておくとビルド時にインストールしてくれます。本リポジトリではフォーク元のデフォルト設定を利用しています。  
